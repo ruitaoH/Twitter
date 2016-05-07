@@ -1,0 +1,438 @@
+<!--https://twitter.com/jeresig-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>twitter</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body style="position: relative;">
+    <div id="dialog" class="dialog"></div>
+    <div id="shadow" style="display: none; width: 100%;height: 100%;position: absolute;top:0;left:0;background:rgba(0,0,0,0.5);z-index:200;"></div>
+    <header>
+        <nav style="min-width: 893px;">
+            <div class="container">
+                <div class="left">
+                    <ul>
+                        <li class="home">
+                            <a style="cursor: pointer;">
+                                <span class="bird_icon icon"></span>
+                                <span class="text">主页</span>
+                            </a>
+                        </li>
+                        <li class="about">
+                            <a style="cursor: pointer">
+                                <span>关于</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="search">
+                        <input type="search" placeholder="搜索Twitter" />
+                        <span class="search_icon icon"></span>
+                    </div>
+                    <div class="login">
+                        <a style="cursor: pointer">
+                            <span class="text">已有账号?登录</span>
+                            <span class="lower_triangle"></span>
+                        </a>
+                        <div class="login_dialog">
+                            <span></span>
+                            <div>
+                                <div style="overflow: hidden;">
+                                    <p>已有账号?</p>
+                                    <input type="text" placeholder="手机、邮件地址或用户名" name="#" />
+                                    <input type="password" placeholder="密码" name="#" />
+                                </div>
+                                <div class="save">
+                                    <label>
+                                        <input type="checkbox" name="#" />
+                                        <span>记住我</span>
+                                    </label><span class="forget">忘记密码?</span>
+                                </div>
+                                <button class="btn_login">登陆</button>
+
+                                <div style="width:100%;border-bottom:1px solid rgb(102, 117, 127);margin-top:14px;"></div>
+
+                                <div class="register">
+                                    <div>首次使用Twitter?</div>
+                                    <button class="btn_register">注册</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="img_wrapper" style="min-width: 893px;">
+            <img src="images/header1.jpg" />
+        </div>
+        <div class="info">
+            <div class="wrapper">
+                <div class="image">
+                    <div class="big_header">
+                        <img src="images/logo.jpg" />
+                    </div>
+
+                    <div style="width: 100%;height: 100%;position: absolute;overflow: hidden">
+                        <div class="self_info">
+                            <div>
+                                <img src="images/logo_small.jpg" />
+                                <div>
+                                    <span class="fullname">John Resig<span class="icon verified_icon"></span></span><span class="check_wrapper"><span class="check_triangle"></span><span class="check">认证账号</span></span>
+                                    <p class="username">&copy; jeresig</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <ul>
+                        <li class="first">
+                            <span class="word">推文</span>
+                            <span class="number">9,216</span>
+                        </li>
+                        <li>
+                            <span class="word">正在关注</span>
+                            <span class="number">3,243</span>
+                        </li>
+                        <li>
+                            <span class="word">关注者</span>
+                            <span class="number">22.2</span>
+                        </li>
+                        <li>
+                            <span class="word">喜欢</span>
+                            <span class="number">3,023</span>
+                        </li>
+                        <li>
+                            <span class="word">列表</span>
+                            <span class="number">2</span>
+                        </li>
+                    </ul>
+                    <button>
+                        <span class="follow_wrapper">
+                            <span class="follow_icon icon"></span>
+                            <span class="follow">关注</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="AppContainer">
+        <div class="container_wrapper">
+            <div class="container_left">
+                <div class="left_wrapper">
+                    <div class="left_info">
+                        <h1>
+                            <a>John&nbsp;Resig</a><span class="icon verified_icon"></span><span class="check_wrapper"><span class="check_triangle"></span><span class="check">认证账号</span></span>
+                        </h1>
+                        <a class="self">
+                            @<span>jeresig</span></a>
+                        <p>
+                            Creator of <a class="others">@<span>jquery</span></a>, JavaScript programmer, author, Japanese woodblock nerd (<span>ukiyo-e.org</span>), work at <a class="others">@<span>khanacademy</span></a>.
+                        </p>
+                        <div class="card location">
+                            <span class="icon location_icon"></span>
+                            <span>Brooklyn, NY</span>
+                        </div>
+                        <div class="card url">
+                            <span class="icon url_icon"></span>
+                            <span>ejohn.org</span>
+                        </div>
+                        <div class="card joinDate">
+                            <span class="icon joinDate_icon"></span>
+                            <span>加入于2007年2月</span>
+                        </div>
+                    </div>
+                    <div class="left_image">
+                        <div class="photos">
+                            <span class="icon photo_icon"></span>
+                            <span>350 个照片和视频</span>
+                        </div>
+                        <div class="images_wrapper">
+                            <div><img src="images/1.jpg" /></div>
+                            <div><img src="images/2.jpg" /></div>
+                            <div><img src="images/3.jpg" /></div>
+                            <div><img src="images/4.jpg" /></div>
+                            <div><img src="images/5.jpg" /></div>
+                            <div><img src="images/6.jpg" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container_center">
+                <div class="center_header">
+                    <a >推文</a>
+                    <a >推文和回复</a>
+                    <a >媒体</a>
+                </div>
+
+                <div class="center_content">
+                    <div class="twitter">
+                        <img src="images/logo_small.jpg" />
+                        <div class="twitter_content">
+                            <div class="twitter_header">
+                                <span class="self_name">John Resig</span><span> @ jeresig </span><span class="icon dot_icon"></span><span> 4月29日</span>
+                            </div>
+                            <p>
+                                Iterable NodeLists are so fundamentally important to the quality of the DOM. Unsurprisingly I now use React for most of my coding instead.
+                            </p>
+                        </div>
+                        <div class="twitter_footer">
+                            <ul>
+                                <li>
+                                    <span class="message"><span class="info">回复</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon reply_icon"></span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">转推</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon retweet_icon"></span>
+                                    <span class="count">25</span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">喜欢</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="like_icon"></span>
+                                    <span class="count">60</span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">更多</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon dots_icon"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="twitter">
+                        <img src="images/logo_small.jpg" />
+                        <div class="twitter_content">
+                            <div class="twitter_header">
+                                <span class="self_name">John Resig</span><span> @ jeresig </span><span class="icon dot_icon"></span><span> 4月29日</span>
+                            </div>
+                            <p>
+                                "So who the hell was Hieronymus Bosch?"
+                            </p>
+                            <img src="images/content.jpg" />
+                        </div>
+                        <div class="twitter_footer">
+                            <ul>
+                                <li>
+                                    <span class="message"><span class="info">回复</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon reply_icon"></span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">转推</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon retweet_icon"></span>
+                                    <span class="count">25</span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">喜欢</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="like_icon"></span>
+                                    <span class="count">60</span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">更多</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon dots_icon"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="twitter">
+                        <img src="images/logo_small.jpg" />
+                        <div class="twitter_content">
+                            <div class="twitter_header">
+                                <span class="self_name">John Resig</span><span> @ jeresig </span><span class="icon dot_icon"></span><span> 4月29日</span>
+                            </div>
+                            <p>
+                                Finally got to see the Temple of Dendur projections at the
+                            </p>
+                            <img src="images/content1.jpg" />
+                        </div>
+                        <div class="twitter_footer">
+                            <ul>
+                                <li>
+                                    <span class="message"><span class="info">回复</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon reply_icon"></span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">转推</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon retweet_icon"></span>
+                                    <span class="count">25</span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">喜欢</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="like_icon"></span>
+                                    <span class="count">60</span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">更多</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon dots_icon"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="twitter">
+                        <img src="images/logo_small.jpg" />
+                        <div class="twitter_content">
+                            <div class="twitter_header">
+                                <span class="self_name">John Resig</span><span> @ jeresig </span><span class="icon dot_icon"></span><span> 4月29日</span>
+                            </div>
+                            <p>
+                                this past Sunday and got to see all the new Spring flowers! Invigorating
+                            </p>
+                            <img src="images/content2.jpg" />
+                        </div>
+                        <div class="twitter_footer">
+                            <ul>
+                                <li>
+                                    <span class="message"><span class="info">回复</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon reply_icon"></span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">转推</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon retweet_icon"></span>
+                                    <span class="count">25</span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">喜欢</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="like_icon"></span>
+                                    <span class="count">60</span>
+                                </li>
+                                <li>
+                                    <span class="message"><span class="info">更多</span>
+                                        <div><span class="down_triangle"></span></div></span>
+                                    <span class="icon dots_icon"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="twitter_last">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container_right">
+                <div class="first">
+                    <h1>首次使用 Twitter?</h1>
+                    <p>立即注册以获得自己的个性化时间线！</p>
+                    <div>注册</div>
+                </div>
+                <div class="like">
+                    <div class="title">
+                        <span>你可能还喜欢</span>
+                        ·
+                        <span>刷新</span>
+                    </div>
+                    <div class="users">
+                        <div>
+                            <img src="images/head1.jpeg" />
+                            <div>
+                                <p class="fullname">Paul Irish</p>
+                                <p class="username">&copy; paul_irish</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="images/head2.png" />
+                            <div>
+                                <p class="fullname">BrendanEich</p>
+                                <p class="username">&copy; BrendanEich</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="images/head3.png" />
+                            <div>
+                                <p class="fullname">Jeff Atwood<span class="icon verified_icon"></span></p>
+                                <p class="username">&copy; codinghorror</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="images/head4.jpg" />
+                            <div>
+                                <p class="fullname">Addy Osmani</p>
+                                <p class="username">&copy; addyosmani</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="images/head5.jpeg" />
+                            <div>
+                                <p class="fullname">Yehuda Katz</p>
+                                <p class="username">&copy; wycats</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="trend">
+                    <div class="title">趋势</div>
+                    <ul>
+                        <li>
+                            <p class="trend_name">#EdBallsDay</p>
+                            <p class="trend_num">1.81万 推文</p>
+                        </li>
+                        <li>
+                            <p class="trend_name">Ken Livingstone</p>
+                            <p class="trend_num">在过去一小时内成为趋势</p>
+                        </li>
+                        <li>
+                            <p class="trend_name">#ProjectHomeOT4Day</p>
+                            <p class="trend_num">10.2万 推文</p>
+                        </li>
+                        <li>
+                            <p class="trend_name">#NRLSouthsTigers</p>
+                            <p class="trend_num">成为趋势已有7小时</p>
+                        </li>
+                        <li>
+                            <p class="trend_name">#EdBallsDay</p>
+                            <p class="trend_num">1.81万 推文</p>
+                        </li>
+                        <li>
+                            <p class="trend_name">Ken Livingstone</p>
+                            <p class="trend_num">在过去一小时内成为趋势</p>
+                        </li>
+                        <li>
+                            <p class="trend_name">#ProjectHomeOT4Day</p>
+                            <p class="trend_num">10.2万 推文</p>
+                        </li>
+                        <li>
+                            <p class="trend_name">#NRLSouthsTigers</p>
+                            <p class="trend_num">成为趋势已有7小时</p>
+                        </li>
+                        <li>
+                            <p class="trend_name">#ProjectHomeOT4Day</p>
+                            <p class="trend_num">10.2万 推文</p>
+                        </li>
+                        <li>
+                            <p class="trend_name">#NRLSouthsTigers</p>
+                            <p class="trend_num">成为趋势已有7小时</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer">
+                    <ul>
+                        <li>&copy; 2016 Twitter</li>
+                        <li class="width">关于</li>
+                        <li class="width">帮助</li>
+                        <li class="width">条款</li>
+                        <li class="width">隐私</li>
+                        <li>Cookies</li>
+                        <li>广告信息</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
